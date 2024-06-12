@@ -1,5 +1,6 @@
 import Break from "@/components/break";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaAward,
   FaInfinity,
@@ -71,7 +72,7 @@ const contentSteps: ContentSteps[] = [
 
 export default function Home() {
   return (
-    <main className="px-5 laptop:px-40">
+    <section>
       <div className="flex items-center justify-center">
         <Image
           src="/images/trung-tam-sua-chua-bep-tu-chau-au.png"
@@ -100,7 +101,7 @@ export default function Home() {
 
       <Break title="Quy trình dịch vụ" />
 
-      <div className="grid grid-cols-5 h-96 gap-3">
+      <div className="flex flex-col gap-3 laptop:grid laptop:grid-cols-5 laptop:h-96 laptop:gap-3">
         {contentSteps.map((item, index) => (
           <fieldset
             className="border-4 border-solid border-[#a2754a] p-10 col-span-1 h-96"
@@ -120,6 +121,49 @@ export default function Home() {
       </div>
 
       <Break title="Dịch vụ sửa chữa" />
-    </main>
+
+      {/* <div className="grid grid-cols-3 gap-5 ">
+        <Link
+          href="/sua-bep-dien"
+          className="flex flex-col items-center justify-center gap-4"
+        >
+          <Image
+            src="/images/sua-bep-tu.jpg"
+            width={400}
+            height={200}
+            alt=""
+          />
+          <p className="text-2xl font-semibold">Sửa Chữa Bếp Từ</p>
+        </Link>
+
+        <Link
+          href="/sua-tv"
+          className="flex flex-col items-center justify-center gap-4"
+        >
+          <Image
+            src="/images/sua-tv.webp"
+            width={400}
+            height={200}
+            alt=""
+          />
+          <p className="text-2xl font-semibold">Sửa Tivi</p>
+        </Link>
+
+        <Link
+          href="/sua-loa"
+          className="flex flex-col items-center justify-center gap-4"
+        >
+          <Image
+            src="/images/sua-loa.jpg"
+            width={400}
+            height={200}
+            alt=""
+          />
+          <p className="text-2xl font-semibold">Sửa Chữa Thiết Bị Âm Thanh</p>
+        </Link>
+      </div> */}
+
+      <Break title="Have a good day" />
+    </section>
   );
 }

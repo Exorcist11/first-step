@@ -45,7 +45,7 @@ const listMenu: ListMenu[] = [
   },
   {
     name: "Thiết bị âm thanh",
-    navTo: "/sua-tivi",
+    navTo: "/sua-loa",
   },
   {
     name: "Liên hệ",
@@ -59,7 +59,7 @@ const listMenu: ListMenu[] = [
 
 export default function Header() {
   return (
-    <div>
+    <div className="sticky top-0 z-50 bg-[#ececec]">
       <div className="hidden laptop:bg-[#5c4a3e] laptop:px-40 laptop:text-base text-xs text-white py-3 px-5  mx-auto laptop:flex flex-col laptop:flex-row justify-between items-center laptop:items-start gap-3">
         {contactInfos.map((info, index) => (
           <div key={index} className="flex gap-2 items-center">
@@ -70,7 +70,7 @@ export default function Header() {
       </div>
 
       <nav>
-        <div className="flex flex-row items-center justify-between mx-20 laptop:mx-40 py-4">
+        <div className="flex flex-row items-center justify-between mx-20 laptop:mx-40 py-4 border-b">
           <div className="laptop:basis-1/3 basis-2/3 text-4xl font-bold ">
             DMC
           </div>

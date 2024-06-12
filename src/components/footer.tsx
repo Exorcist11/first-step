@@ -30,7 +30,7 @@ type AboutUS = {
 const aboutUs: AboutUS[] = [
   {
     name: "Giới thiệu",
-    navigate: "/ve-chung-toi",
+    navigate: "/gioi-thieu",
   },
   {
     name: "Liên hệ",
@@ -104,7 +104,7 @@ export default function Footer() {
         <Image src="/images/title.png" width={400} height={400} alt="title" />
       </div>
       <div className="flex items-center justify-center pt-6">
-        <p>
+        <p className="text-center">
           Copyright 2024 © DMC-Corp - TRUNG TÂM BẢO HÀNH VÀ SỬA CHỮA BẾP TỪ CHÂU
           ÂU
         </p>

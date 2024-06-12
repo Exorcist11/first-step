@@ -24,12 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={roboto.className}>
-        <header>
+      <body suppressHydrationWarning={true} className={`${roboto.className} min-h-screen`}>
+        <header className="sticky top-0 z-50 bg-[#ececec] mb-4">
           <Header />
         </header>
-        {children}
-        <footer>
+        <main className="px-5 laptop:px-40">{children}</main>
+
+        <footer className="sticky top-full">
           <Footer />
         </footer>
       </body>
