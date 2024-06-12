@@ -10,6 +10,7 @@ import {
 
 import Image from "next/image";
 import { FaFire, FaCheck, FaCrown, FaMoneyBillWave } from "react-icons/fa6";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Sữa Chữa Bếp Điện",
@@ -288,62 +289,68 @@ export default function SuaBepDien() {
       </p>
 
       <div className="flex flex-col gap-3 laptop:grid laptop:grid-cols-3">
-        <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
-          <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
-            <div className="w-full h-full">
-              <Image
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
-                src="/images/loi-bep-tu/nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon.jpg"
-                alt="nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-              />
+        <Link href="/nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon">
+          <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
+            <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
+              <div className="w-full h-full">
+                <Image
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
+                  src="/images/loi-bep-tu/nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon.jpg"
+                  alt="nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </div>
+            </div>
+
+            <div className="text-xl font-bold text-[#5b4a3a] text-center ">
+              <p>Khắc phục lỗi không nhận điện bếp</p>
             </div>
           </div>
+        </Link>
 
-          <div className="text-xl font-bold text-[#5b4a3a] text-center ">
-            <p>Khắc phục lỗi không nhận điện bếp</p>
-          </div>
-        </div>
+        <Link href="/loi-bep-tu-chay-binh-thuong-khong-nong">
+          <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
+            <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
+              <div className="w-full h-full">
+                <Image
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer"
+                  src="/images/loi-bep-tu/loi-bep-tu-chay-binh-thuong-khong-nong.jpg"
+                  alt="bep-tu-loi-e0-e1-e2-e3-e4"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </div>
+            </div>
 
-        <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
-          <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
-            <div className="w-full h-full">
-              <Image
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer"
-                src="/images/loi-bep-tu/loi-bep-tu-chay-binh-thuong-khong-nong.jpg"
-                alt="bep-tu-loi-e0-e1-e2-e3-e4"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-              />
+            <div className="text-xl font-bold text-[#5b4a3a] text-center ">
+              <p>Bếp từ nhận điện nhưng không nóng</p>
             </div>
           </div>
+        </Link>
 
-          <div className="text-xl font-bold text-[#5b4a3a] text-center ">
-            <p>Bếp từ nhận điện nhưng không nóng</p>
-          </div>
-        </div>
+        <Link href='/bep-tu-loi-e0-e1-e2-e3-e4'>
+          <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
+            <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
+              <div className="w-full h-full">
+                <Image
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
+                  src="/images/loi-bep-tu/bep-tu-loi-e0-e1-e2-e3-e4.png"
+                  alt="bep-tu-loi-e0-e1-e2-e3-e4"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </div>
+            </div>
 
-        <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
-          <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
-            <div className="w-full h-full">
-              <Image
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
-                src="/images/loi-bep-tu/bep-tu-loi-e0-e1-e2-e3-e4.png"
-                alt="bep-tu-loi-e0-e1-e2-e3-e4"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-              />
+            <div className="text-xl font-bold text-[#5b4a3a] text-center ">
+              <p>Các lỗi E trên bếp từ và cách khắc phục</p>
             </div>
           </div>
-
-          <div className="text-xl font-bold text-[#5b4a3a] text-center ">
-            <p>Các lỗi E trên bếp từ và cách khắc phục</p>
-          </div>
-        </div>
+        </Link>
       </div>
 
       <p className="font-bold text-2xl">CÁC LOẠI BẾP HỖ TRỢ</p>
