@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { FaPhoneAlt } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import Link from "next/link";
+import { Toaster } from "@/components/ui/toaster";
 
 const roboto = Roboto({
   subsets: ["vietnamese"],
@@ -57,6 +58,7 @@ export default function RootLayout({
             </div>
           </Link>
         </div>
+        <Toaster />
       </body>
     </html>
   );
