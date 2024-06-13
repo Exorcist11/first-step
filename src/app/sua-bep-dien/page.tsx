@@ -297,9 +297,8 @@ export default function SuaBepDien() {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
                   src="/images/loi-bep-tu/nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon.jpg"
                   alt="nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </div>
             </div>
@@ -317,10 +316,9 @@ export default function SuaBepDien() {
                 <Image
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                   src="/images/loi-bep-tu/loi-bep-tu-chay-binh-thuong-khong-nong.jpg"
-                  alt="bep-tu-loi-e0-e1-e2-e3-e4"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  alt="loi-bep-tu/loi-bep-tu-chay-binh-thuong-khong-nong"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </div>
             </div>
@@ -331,7 +329,7 @@ export default function SuaBepDien() {
           </div>
         </Link>
 
-        <Link href='/bep-tu-loi-e0-e1-e2-e3-e4'>
+        <Link href="/bep-tu-loi-e0-e1-e2-e3-e4">
           <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
             <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
               <div className="w-full h-full">
@@ -339,9 +337,8 @@ export default function SuaBepDien() {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
                   src="/images/loi-bep-tu/bep-tu-loi-e0-e1-e2-e3-e4.png"
                   alt="bep-tu-loi-e0-e1-e2-e3-e4"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </div>
             </div>
