@@ -7,6 +7,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import Link from "next/link";
 import { Toaster } from "@/components/ui/toaster";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const roboto = Roboto({
   subsets: ["vietnamese"],
@@ -59,6 +60,7 @@ export default function RootLayout({
           </Link>
         </div>
         <Toaster />
+        <SpeedInsights />
       </body>
     </html>
   );
