@@ -175,33 +175,39 @@ export default function SuaBepDien() {
         BẢNG GIÁ DỊCH VỤ SỬA CHỮA BẾP TỪ TẠI NHÀ
       </p>
       {/* Báo giá */}
-      <table className="table-auto w-full text-lg">
-        <thead className="font-semibold uppercase  bg-gray-50">
-          <tr>
-            <th className="p-2 whitespace-nowrap ">
-              <div className="font-semibold text-left">Hạng mục sữa chữa</div>
-            </th>
-            <th className="p-2 whitespace-nowrap">
-              <div className="font-semibold text-left">Giá dịch vụ</div>
-            </th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-white bg-[#f0f0f0]">
-          <tr>
-            <td className="p-2 whitespace-nowrap">
-              <div className="font-medium text-green-500">Sửa bếp từ đơn</div>
-            </td>
-            <td className="p-2 whitespace-nowrap">150.000 VND - 200.000 VND</td>
-          </tr>
+      <div>
+        <table className="table-auto w-full text-lg">
+          <thead className="font-semibold uppercase  bg-gray-50">
+            <tr>
+              <th className="p-2 whitespace-nowrap ">
+                <div className="font-semibold text-left">Hạng mục sữa chữa</div>
+              </th>
+              <th className="p-2 whitespace-nowrap">
+                <div className="font-semibold text-left">Giá dịch vụ</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-white bg-[#f0f0f0]">
+            <tr>
+              <td className="p-2 whitespace-nowrap">
+                <div className="font-medium text-green-500">Sửa bếp từ đơn</div>
+              </td>
+              <td className="p-2 whitespace-nowrap">
+                150.000 VND - 200.000 VND
+              </td>
+            </tr>
 
-          <tr>
-            <td className="p-2 whitespace-nowrap">
-              <div className="font-medium text-green-500">Sửa bếp từ đơn</div>
-            </td>
-            <td className="p-2 whitespace-nowrap">150.000 VND - 200.000 VND</td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <td className="p-2 whitespace-nowrap">
+                <div className="font-medium text-green-500">Sửa bếp từ đơn</div>
+              </td>
+              <td className="p-2 whitespace-nowrap">
+                150.000 VND - 200.000 VND
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p className="font-bold text-2xl">CAM KẾT CỦA CHÚNG TÔI</p>
 
