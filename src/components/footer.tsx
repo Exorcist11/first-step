@@ -63,7 +63,7 @@ export default function Footer() {
           <p>Địa chỉ: Số 165 Thái Hà - Đống Đa – Hà Nội </p>
           <p>Điện thoại: 02462.534.594 – 0948.265.665 </p>
           <p>
-            Hỗ trợ kỹ thuật sửa chữa 24/7 <br /> Hotline: 097.328.5665{" "}
+            Hỗ trợ kỹ thuật sửa chữa 24/7 <br /> Hotline: <a href="tel:097.328.5665">097.328.5665</a>{" "}
           </p>
         </div>
 

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import React from "react";
 import {
   Breadcrumb,
@@ -8,6 +9,12 @@ import {
 } from "@/components/ui/breadcrumb";
 import Image from "next/image";
 
+export const metadata: Metadata = {
+  title: "Sữa Chữa Tivi",
+  keywords: "Sữa chữa tivi, bảo hành tivi, tivi châu âu",
+  description:
+    "Trung tâm bảo hành và sữa chữa bếp từ Châu Âu tại Hà Nội chuyên cung cấp dịch vụ sửa chữa Tivi và bảo hành các loại tivi Sony, Samsung, LG, TCL, Xiaomi, Toshiba. Liên hệ ngay với chúng tôi qua hotline 02462.534.594",
+};
 export default function SuaTV() {
   return (
     <div className="flex flex-col gap-4 mb-10">
@@ -37,9 +44,9 @@ export default function SuaTV() {
         bạn dịch vụ sửa chữa tivi chuyên nghiệp, nhanh chóng và đáng tin cậy.
       </p>
 
-      <p className="font-bold text-2xl">
+      <h2 className="font-bold text-2xl">
         SỬA CHỮA TV TẠI HÀ NỘI - TRUNG TÂM SỬA CHỮA BẾP TỪ CHÂU ÂU
-      </p>
+      </h2>
 
       <div className="text-lg gap-4 flex flex-col text-justify">
         <p>
@@ -109,9 +116,9 @@ export default function SuaTV() {
         </p>
       </div>
 
-      <p className="font-bold text-2xl">
+      <h2 className="font-bold text-2xl">
         CÁC LỖI TIVI THƯỜNG GẶP VÀ CÁCH KHẮC PHỤC
-      </p>
+      </h2>
 
       <div className="text-lg gap-4 flex flex-col text-justify">
         <ul>
@@ -217,9 +224,9 @@ export default function SuaTV() {
         </ul>
       </div>
 
-      <p className="font-bold text-2xl">
+      <h2 className="font-bold text-2xl">
         BẢNG GIÁ DỊCH VỤ SỬA CHỮA TIVI TẠI HÀ NỘI
-      </p>
+      </h2>
 
       <div>
         <table className="table-auto w-full text-lg">
@@ -247,9 +254,9 @@ export default function SuaTV() {
         </table>
       </div>
 
-      <p className="font-bold text-2xl">
+      <h2 className="font-bold text-2xl">
         QUY TRÌNH SỬA CHỮA TIVI TẠI TRUNG TÂM
-      </p>
+      </h2>
 
       <div>
         <div className="flex items-center justify-center">

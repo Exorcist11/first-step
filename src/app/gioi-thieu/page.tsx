@@ -118,7 +118,7 @@ export default function AboutUS() {
               <strong>Địa chỉ: </strong> VN
             </li>
             <li>
-              <strong>Hotline: </strong> 097.328.5665
+              <strong>Hotline: </strong> <a href="tel:097.328.5665">097.328.5665</a>
             </li>
             <li>
               <strong>Website: </strong> VN

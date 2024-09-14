@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
-import { FaClock, FaPhone, FaAlignJustify } from "react-icons/fa6";
+import { FaClock, FaPhone, FaAlignJustify, FaStar } from "react-icons/fa6";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
 
 type ContactInfo = {
   icon: JSX.Element;
@@ -71,8 +72,15 @@ export default function Header() {
 
       <nav>
         <div className="flex flex-row items-center justify-between mx-20 laptop:mx-40 py-4 border-b">
-          <div className="laptop:basis-1/3 basis-2/3 text-4xl font-bold ">
-            DMC
+          <div className="laptop:basis-1/3 basis-2/3 text-4xl font-bold relative">
+            <h4 className="uppercase  italic text-gray-500 ">
+              Baohanhbepau.com
+            </h4>
+            <p className="text-sm text-center text-blue-400 font-mediumn flex items-center justify-center gap-2">
+              <FaStar/>
+              <span>Uy tín - Tận tâm - Nhanh gọn</span>
+              <FaStar/>
+            </p>
           </div>
 
           <ul className="hidden basis-2/3 laptop:flex laptop:flex-row laptop:justify-end laptop:gap-8">

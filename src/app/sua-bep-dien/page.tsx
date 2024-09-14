@@ -14,7 +14,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Sữa Chữa Bếp Điện",
-  description: "Trung Tâm Bảo Hành Và Sửa Chữa Bếp Từ Châu Âu",
+  description:
+    "Trung tâm bảo hành và sữa chữa bếp từ Châu Âu tại Hà Nội chuyên cung cấp dịch vụ sửa chữa bếp từ chuyên nghiệp và uy tín. Liên hệ ngay với chúng tôi qua hotline 02462.534.594",
 };
 
 type imgProvider = {
@@ -82,9 +83,14 @@ export default function SuaBepDien() {
       <p className="text-lg text-justify">
         Nếu bạn sản phẩm bếp từ của bạn đang gặp vấn đề hay cần tìm trung tâm
         sửa bếp từ uy tín tại Hà Nội, hãy liên hệ qua số hotline 24/7:{" "}
-        <span className="text-red-600 font-bold">097.328.5665</span> hoặc số{" "}
-        <span className="text-red-600 font-bold">02462.534.594</span> để được tư
-        vấn miễn phí.
+        <span className="text-red-600 font-bold">
+          <a href="tel:097.328.5665">097.328.5665</a>
+        </span>{" "}
+        hoặc số{" "}
+        <span className="text-red-600 font-bold">
+          <a href="tel:02462.534.594">02462.534.594</a>
+        </span>{" "}
+        để được tư vấn miễn phí.
       </p>
       <div className="flex items-center justify-center">
         <Image
@@ -95,7 +101,9 @@ export default function SuaBepDien() {
         />
       </div>
 
-      <p className="font-bold text-2xl">CÁC DỊCH VỤ SỬA CHỮA BẾP TỪ TẠI NHÀ</p>
+      <h2 className="font-bold text-2xl">
+        CÁC DỊCH VỤ SỬA CHỮA BẾP TỪ TẠI NHÀ
+      </h2>
       <p className="text-lg font-medium">
         Trung tâm bảo hành và sữa chữa bếp từ Châu Âu chuyên nhận sửa chữa bếp
         từ tại nhà với các lỗi khác nhau như:
@@ -168,12 +176,14 @@ export default function SuaBepDien() {
         Sau một thời gian dài sử dụng, bếp từ có thể gặp một số vấn đề kỹ thuật
         không mong muốn. Để được kiểm tra và hỗ trợ khi cần thiết, hãy gọi ngay
         đến hotline 24/7{" "}
-        <span className="text-red-600 font-bold">097.328.5665</span> để được đội
-        ngũ kỹ thuật hỗ trợ nhanh chóng.
+        <span className="text-red-600 font-bold">
+          <a href="tel:097.328.5665">097.328.5665</a>
+        </span>{" "}
+        để được đội ngũ kỹ thuật hỗ trợ nhanh chóng.
       </p>
-      <p className="font-bold text-2xl">
+      <h2 className="font-bold text-2xl">
         BẢNG GIÁ DỊCH VỤ SỬA CHỮA BẾP TỪ TẠI NHÀ
-      </p>
+      </h2>
       {/* Báo giá */}
       <div>
         <table className="table-auto w-full text-lg">
@@ -209,7 +219,7 @@ export default function SuaBepDien() {
         </table>
       </div>
 
-      <p className="font-bold text-2xl">CAM KẾT CỦA CHÚNG TÔI</p>
+      <h2 className="font-bold text-2xl">CAM KẾT CỦA CHÚNG TÔI</h2>
 
       <p className="text-lg text-justify">
         Trung tâm bảo hành và sửa chữa bếp từ chúng tôi xin cam kết:
@@ -250,7 +260,7 @@ export default function SuaBepDien() {
         </div>
       </div>
 
-      <p className="font-bold text-2xl">QUY TRÌNH LÀM VIỆC</p>
+      <h2 className="font-bold text-2xl">QUY TRÌNH LÀM VIỆC</h2>
 
       <div className="flex flex-col items-center gap-4">
         <Image
@@ -290,9 +300,9 @@ export default function SuaBepDien() {
         </div>
       </div>
 
-      <p className="font-bold text-2xl">
+      <h2 className="font-bold text-2xl">
         HƯỚNG DẪN KHẮC PHỤC MỘT SỐ LỖI THƯỜNG GẶP
-      </p>
+      </h2>
 
       <div className="flex flex-col gap-3 laptop:grid laptop:grid-cols-3">
         <Link href="/nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon">
@@ -356,7 +366,7 @@ export default function SuaBepDien() {
         </Link>
       </div>
 
-      <p className="font-bold text-2xl">CÁC LOẠI BẾP HỖ TRỢ</p>
+      <h2 className="font-bold text-2xl">CÁC LOẠI BẾP HỖ TRỢ</h2>
       <div className="grid grid-cols-4 mb-10">
         {arrImg.map((item, index) => (
           <div key={index} className="col-span-1 p-5">

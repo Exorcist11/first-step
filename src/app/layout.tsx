@@ -54,7 +54,9 @@ export default function RootLayout({
                 <div className="bg-[#e60808] rounded-full p-3 font-semibold">
                   <FaPhoneAlt size={25} />
                 </div>
-                <p>097.328.5665</p>
+                <p>
+                  <a href="tel:097.328.5665">097.328.5665</a>
+                </p>
               </div>
             </div>
           </Link>
