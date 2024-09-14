@@ -9,30 +9,22 @@ import {
 } from "@/components/ui/breadcrumb";
 
 import Image from "next/image";
-import { FaFire, FaCheck, FaCrown, FaMoneyBillWave } from "react-icons/fa6";
+import { FaFire } from "react-icons/fa6";
 import Link from "next/link";
+import {
+  BLOG_STOVE,
+  PROCESS,
+  QUALITY_COMMIT,
+  SERVICE_STOVE,
+  VENDER_STOVE,
+} from "@/utils/electronic-stove";
+import { PRICE } from "@/utils/price";
 
 export const metadata: Metadata = {
   title: "Sữa Chữa Bếp Điện",
   description:
     "Trung tâm bảo hành và sữa chữa bếp từ Châu Âu tại Hà Nội chuyên cung cấp dịch vụ sửa chữa bếp từ chuyên nghiệp và uy tín. Liên hệ ngay với chúng tôi qua hotline 02462.534.594",
 };
-
-type imgProvider = {
-  link_img: string;
-  title: string;
-};
-
-const arrImg: imgProvider[] = [
-  { link_img: "bep-tu-bluestone.png", title: "bep-tu-bluestone" },
-  { link_img: "bep-tu-bosch.png", title: "bep-tu-bosch" },
-  { link_img: "bep-tu-chefs.png", title: "bep-tu-chefs" },
-  { link_img: "bep-tu-electrolux.png", title: "bep-tu-electrolux" },
-  { link_img: "bep-tu-elmich.png", title: "bep-tu-elmich" },
-  { link_img: "bep-tu-sunhouse.png", title: "be-tu-sunhouse" },
-  { link_img: "bep-tu-teka.png", title: "be-tu-teka" },
-  { link_img: "logo-bep-tu-midea.jpg", title: "logo-bep-tu-midea" },
-];
 
 export default function SuaBepDien() {
   return (
@@ -84,11 +76,11 @@ export default function SuaBepDien() {
         Nếu bạn sản phẩm bếp từ của bạn đang gặp vấn đề hay cần tìm trung tâm
         sửa bếp từ uy tín tại Hà Nội, hãy liên hệ qua số hotline 24/7:{" "}
         <span className="text-red-600 font-bold">
-          <a href="tel:097.328.5665">097.328.5665</a>
+          <Link href="tel:097.328.5665">097.328.5665</Link>
         </span>{" "}
         hoặc số{" "}
         <span className="text-red-600 font-bold">
-          <a href="tel:02462.534.594">02462.534.594</a>
+          <Link href="tel:02462.534.594">02462.534.594</Link>
         </span>{" "}
         để được tư vấn miễn phí.
       </p>
@@ -101,7 +93,7 @@ export default function SuaBepDien() {
         />
       </div>
 
-      <h2 className="font-bold text-2xl">
+      <h2 className="font-bold text-2xl uppercase">
         CÁC DỊCH VỤ SỬA CHỮA BẾP TỪ TẠI NHÀ
       </h2>
       <p className="text-lg font-medium">
@@ -110,58 +102,12 @@ export default function SuaBepDien() {
       </p>
       <div className="text-lg text-justify">
         <ul className="flex flex-col gap-2 pl-5">
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ không lên nguồn, bị mất nguồn hay lên nguồn rồi tắt
-          </li>
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ không nhận nồi, bếp từ không nóng
-          </li>
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ bị nhảy aptomat, bị nổ cầu chì, chết IGBT
-          </li>
-
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ bị rò điện, vào điện nhưng không bật được
-          </li>
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ kêu tạch tạch không nóng
-          </li>
-
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp điện từ bị loạn cảm ứng
-          </li>
-
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ đôi bị hỏng 1 bên
-          </li>
-
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ cảm ứng không nhạy, hỏng cảm ứng
-          </li>
-
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ bị nóng mặt kính, cháy mặt kính, vỡ mặt kính
-          </li>
-
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ bị khóa
-          </li>
-
-          <li className="flex items-center gap-3 ">
-            <FaFire color="red" />
-            Bếp từ báo các lỗi E0, E1, E2, E3, E4, E5, E6, E7, E8, E9 trên bảng
-            điều khiển
-          </li>
+          {SERVICE_STOVE.map((item, index) => (
+            <li className="flex items-center gap-3 " key={index}>
+              <FaFire color="red" />
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="flex items-center justify-center">
@@ -177,7 +123,7 @@ export default function SuaBepDien() {
         không mong muốn. Để được kiểm tra và hỗ trợ khi cần thiết, hãy gọi ngay
         đến hotline 24/7{" "}
         <span className="text-red-600 font-bold">
-          <a href="tel:097.328.5665">097.328.5665</a>
+          <Link href="tel:097.328.5665">097.328.5665</Link>
         </span>{" "}
         để được đội ngũ kỹ thuật hỗ trợ nhanh chóng.
       </p>
@@ -198,23 +144,14 @@ export default function SuaBepDien() {
             </tr>
           </thead>
           <tbody className="divide-y divide-white bg-[#f0f0f0]">
-            <tr>
-              <td className="p-2 whitespace-nowrap">
-                <div className="font-medium text-green-500">Sửa bếp từ đơn</div>
-              </td>
-              <td className="p-2 whitespace-nowrap">
-                150.000 VND - 200.000 VND
-              </td>
-            </tr>
-
-            <tr>
-              <td className="p-2 whitespace-nowrap">
-                <div className="font-medium text-green-500">Sửa bếp từ đơn</div>
-              </td>
-              <td className="p-2 whitespace-nowrap">
-                150.000 VND - 200.000 VND
-              </td>
-            </tr>
+            {PRICE.map((item, index) => (
+              <tr key={index}>
+                <td className="p-2 whitespace-nowrap">
+                  <p className="font-medium text-green-500">{item.name}</p>
+                </td>
+                <td className="p-2 whitespace-nowrap">{item.price}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -226,38 +163,18 @@ export default function SuaBepDien() {
       </p>
 
       <div className="flex flex-col gap-3 laptop:grid laptop:grid-cols-3">
-        <div className="laptop:col-span-1 border rounded-xl p-5 flex flex-col items-center justify-center gap-5">
-          <FaCheck size={50} />
-          <p className="text-2xl font-bold text-[#5b4a3a] underline uppercase ">
-            Uy Tín và Chuyên Nghiệp
-          </p>
-          <p className="text-center text-[#6a584b]">
-            Chúng tôi ưu tiên chất lượng, uy tín, và nâng cao dịch vụ để đáp ứng
-            nhu cầu khách hàng.
-          </p>
-        </div>
-
-        <div className="laptop:col-span-1 border rounded-xl p-5 flex flex-col items-center justify-center gap-5">
-          <FaMoneyBillWave size={50} />
-          <p className="text-2xl font-bold text-[#5b4a3a] underline uppercase">
-            Giá Cả Hợp Lý
-          </p>
-          <p className="text-center text-[#6a584b]">
-            Chúng tôi cam kết cung cấp dịch vụ với mức giá cạnh tranh và minh
-            bạch.
-          </p>
-        </div>
-
-        <div className="laptop:col-span-1 border rounded-xl p-5 flex flex-col items-center justify-center gap-5">
-          <FaCrown size={50} />
-          <p className="text-2xl font-bold text-[#5b4a3a] underline uppercase">
-            Hỗ Trợ Khách Hàng
-          </p>
-          <p className="text-center text-[#6a584b]">
-            Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ và giải đáp mọi
-            thắc mắc của quý khách.
-          </p>
-        </div>
+        {QUALITY_COMMIT.map((item, index) => (
+          <div
+            className="laptop:col-span-1 border rounded-xl p-5 flex flex-col items-center justify-center gap-5"
+            key={index}
+          >
+            <item.icon size={50} />
+            <p className="text-2xl font-bold text-[#5b4a3a] underline uppercase ">
+              {item.title}
+            </p>
+            <p className="text-center text-[#6a584b]">{item.describe}</p>
+          </div>
+        ))}
       </div>
 
       <h2 className="font-bold text-2xl">QUY TRÌNH LÀM VIỆC</h2>
@@ -277,25 +194,11 @@ export default function SuaBepDien() {
             được chia thành các bước sau:
           </p>
           <ul className="flex flex-col gap-3 pl-5 mt-4">
-            <li>
-              <strong>Liên Hệ và Tư Vấn:</strong> Quý khách có thể liên hệ với
-              chúng tôi qua điện thoại hoặc website để được tư vấn và đặt lịch
-              sửa chữa.
-            </li>
-            <li>
-              <strong>Khảo Sát và Báo Giá:</strong> Kỹ thuật viên sẽ đến tận nơi
-              để kiểm tra và đưa ra báo giá cụ thể trước khi tiến hành sửa chữa.
-            </li>
-            <li>
-              <strong>Sửa Chữa và Bảo Dưỡng:</strong> Sau khi khách hàng đồng ý,
-              chúng tôi sẽ tiến hành sửa chữa và bảo dưỡng bếp từ.
-            </li>
-            <li>
-              <strong>Bàn Giao và Thanh Toán:</strong> Bếp từ sẽ được bàn giao
-              lại cho khách hàng sau khi hoàn tất, kèm theo hướng dẫn sử dụng và
-              bảo dưỡng. Thanh toán sẽ được thực hiện sau khi khách hàng hài
-              lòng với dịch vụ.
-            </li>
+            {PROCESS.map((item, index) => (
+              <li key={index}>
+                <strong>{item.title}:</strong> {item.description}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -304,80 +207,36 @@ export default function SuaBepDien() {
         HƯỚNG DẪN KHẮC PHỤC MỘT SỐ LỖI THƯỜNG GẶP
       </h2>
 
-      <div className="flex flex-col gap-3 laptop:grid laptop:grid-cols-3">
-        <Link href="/nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon">
-          <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
-            <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
-              <div className="w-full h-full">
+      <div className="flex flex-col gap-3 laptop:grid laptop:grid-cols-3 laptop:gap-5">
+        {BLOG_STOVE.map((item, index) => (
+          <Link href={item.href} key={index}>
+            <div className="flex flex-col items-center justify-between gap-5 cursor-pointer group border rounded-xl p-5 h-full">
+              <div className="relative w-full h-64 overflow-hidden transition-shadow hover:shadow-black/30">
                 <Image
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
-                  src="/images/loi-bep-tu/nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon.jpg"
-                  alt="nguyen-nhan-va-cach-xu-ly-loi-bep-tu-khong-len-nguon"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={item.imgLink}
+                  alt={item.alt}
                   fill
                   style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </div>
-            </div>
-
-            <div className="text-xl font-bold text-[#5b4a3a] text-center ">
-              <p>Khắc phục lỗi không nhận điện bếp</p>
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/loi-bep-tu-chay-binh-thuong-khong-nong">
-          <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
-            <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
-              <div className="w-full h-full">
-                <Image
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer"
-                  src="/images/loi-bep-tu/loi-bep-tu-chay-binh-thuong-khong-nong.jpg"
-                  alt="loi-bep-tu/loi-bep-tu-chay-binh-thuong-khong-nong"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                />
+              <div className="text-xl font-bold text-[#5b4a3a] text-center">
+                <p>{item.title}</p>
               </div>
             </div>
-
-            <div className="text-xl font-bold text-[#5b4a3a] text-center ">
-              <p>Bếp từ nhận điện nhưng không nóng</p>
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/bep-tu-loi-e0-e1-e2-e3-e4">
-          <div className="laptop:col-span-1 cursor-pointer group border rounded-xl p-5 flex flex-col items-center justify-center gap-5 group">
-            <div className="relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-black/30 w-full h-64">
-              <div className="w-full h-full">
-                <Image
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
-                  src="/images/loi-bep-tu/bep-tu-loi-e0-e1-e2-e3-e4.png"
-                  alt="bep-tu-loi-e0-e1-e2-e3-e4"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                />
-              </div>
-            </div>
-
-            <div className="text-xl font-bold text-[#5b4a3a] text-center ">
-              <p>Các lỗi E trên bếp từ và cách khắc phục</p>
-            </div>
-          </div>
-        </Link>
+          </Link>
+        ))}
       </div>
 
       <h2 className="font-bold text-2xl">CÁC LOẠI BẾP HỖ TRỢ</h2>
       <div className="grid grid-cols-4 mb-10">
-        {arrImg.map((item, index) => (
-          <div key={index} className="col-span-1 p-5">
+        {VENDER_STOVE.map((item, index) => (
+          <div key={index} className="col-span-1 p-5 relative h-[150px]">
             <Image
               className="h-full w-full transition-transform duration-500 group-hover:scale-105 object-center cursor-pointer"
               src={`/images/bep-tu/${item.link_img}`}
               alt={item.title}
-              width={500}
-              height={500}
-              objectFit="cover"
-              objectPosition="center"
+              layout="fill"
             />
           </div>
         ))}

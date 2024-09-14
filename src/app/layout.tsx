@@ -44,22 +44,22 @@ export default function RootLayout({
 
         <div className="fixed bottom-14 flex flex-col gap-5 left-10 z-50 ">
           <Link href="/">
-            <div className="bg-blue-600 p-3 rounded-full w-fit text-white animate-bounce cursor-pointer">
+            <p className="bg-blue-600 p-3 rounded-full w-fit text-white animate-bounce cursor-pointer">
               <SiZalo size={30} />
-            </div>
+            </p>
           </Link>
-          <Link href="/">
+          <div >
             <div className=" bg-[#ec4646] bg-opacity-50 rounded-full text-white animate-bounce cursor-pointer pr-5">
               <div className="flex gap-4 items-center">
                 <div className="bg-[#e60808] rounded-full p-3 font-semibold">
                   <FaPhoneAlt size={25} />
                 </div>
                 <p>
-                  <a href="tel:097.328.5665">097.328.5665</a>
+                  <Link href="tel:097.328.5665">097.328.5665</Link>
                 </p>
               </div>
             </div>
-          </Link>
+          </div>
         </div>
         <Toaster />
         <SpeedInsights />

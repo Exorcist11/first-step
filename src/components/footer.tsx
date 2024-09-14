@@ -63,8 +63,9 @@ export default function Footer() {
           <p>Địa chỉ: Số 165 Thái Hà - Đống Đa – Hà Nội </p>
           <p>Điện thoại: 02462.534.594 – 0948.265.665 </p>
           <p>
-            Hỗ trợ kỹ thuật sửa chữa 24/7 <br /> Hotline: <a href="tel:097.328.5665">097.328.5665</a>{" "}
+            Hỗ trợ kỹ thuật sửa chữa 24/7 <br /> Hotline: <Link href="tel:097.328.5665">097.328.5665</Link>{" "}
           </p>
+          
         </div>
 
         <div className="flex flex-col gap-3 col-span-1">

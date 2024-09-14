@@ -1,13 +1,14 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaClock, FaPhone, FaAlignJustify, FaStar } from "react-icons/fa6";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
 
 type ContactInfo = {
   icon: JSX.Element;
@@ -59,6 +60,7 @@ const listMenu: ListMenu[] = [
 ];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="sticky top-0 z-50 bg-[#ececec]">
       <div className="hidden laptop:bg-[#5c4a3e] laptop:px-40 laptop:text-base text-xs text-white py-3 px-5  mx-auto laptop:flex flex-col laptop:flex-row justify-between items-center laptop:items-start gap-3">
@@ -71,15 +73,15 @@ export default function Header() {
       </div>
 
       <nav>
-        <div className="flex flex-row items-center justify-between mx-20 laptop:mx-40 py-4 border-b">
-          <div className="laptop:basis-1/3 basis-2/3 text-4xl font-bold relative">
+        <div className="flex flex-col gap-3 items-center justify-between  laptop:flex-row laptop:mx-40 py-4 border-b">
+          <div className="laptop:basis-1/3 basis-2/3 text-2xl laptop:text-4xl font-bold relative">
             <h4 className="uppercase  italic text-gray-500 ">
               Baohanhbepau.com
             </h4>
             <p className="text-sm text-center text-blue-400 font-mediumn flex items-center justify-center gap-2">
-              <FaStar/>
+              <FaStar />
               <span>Uy tín - Tận tâm - Nhanh gọn</span>
-              <FaStar/>
+              <FaStar />
             </p>
           </div>
 
@@ -96,23 +98,31 @@ export default function Header() {
             ))}
           </ul>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger>
-              <div className="laptop:hidden basis-1/3 flex justify-end cursor-pointer">
+          <DropdownMenu open={open} onOpenChange={setOpen}>
+            <DropdownMenuTrigger className="focus-visible:ring-transparent focus-visible:right-0">
+              <div className="laptop:hidden basis-1/3 flex justify-end cursor-pointer ">
                 <FaAlignJustify color="#061123" size={24} />
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-screen flex justify-center mt-4">
+            <DropdownMenuContent
+              className="w-screen flex justify-center mt-4"
+              onCloseAutoFocus={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+            >
               <ul className=" flex flex-col gap-5 items-center">
                 {listMenu.map((item, index) => (
-                  <li
-                    key={index}
-                    className="uppercase font-semibold cursor-pointer py-1 text-gray-500 hover:text-[#061123] relative 
+                  <DropdownMenuItem key={index} asChild>
+                    <li
+                      className="uppercase font-semibold cursor-pointer py-1 text-gray-500 hover:text-[#061123] relative 
                 after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-0.5 after:w-0 hover:after:w-full 
                 after:transition-all after:ease-in-out after:duration-300"
-                  >
-                    <Link href={item.navTo}>{item.name}</Link>
-                  </li>
+                      onClick={() => setOpen(false)}
+                    >
+                      <Link href={item.navTo}>{item.name}</Link>
+                    </li>
+                  </DropdownMenuItem>
                 ))}
               </ul>
             </DropdownMenuContent>

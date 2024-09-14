@@ -10,6 +10,7 @@ import {
 
 import Link from "next/link";
 import Break from "@/components/break";
+import { INTRO } from "@/utils/introduct";
 
 export default function AboutUS() {
   return (
@@ -62,49 +63,17 @@ export default function AboutUS() {
       </div>
       <Break title="Giới thiệu về trung tâm bảo hành bếp từ châu âu" />
       <div className="laptop:grid laptop:grid-cols-4 flex flex-col gap-7">
-        <div className="laptop:col-span-1 text-center flex flex-col gap-3 items-center ">
-          <p className="text-7xl font-mono font-bold">1</p>
-          <p className="font-sans font-semibold text-2xl">Tầm nhìn</p>
-          <hr className="bg-black h-0.5 w-36" />
-          <p className="font-light">
-            Trở thành trung tâm hàng đầu tại Việt Nam trong lĩnh vực bảo hành và
-            sửa chữa bếp từ Châu Âu.
-          </p>
-        </div>
-
-        <div className="laptop:col-span-1 text-center flex flex-col gap-3 items-center">
-          <p className="text-7xl font-mono font-bold">2</p>
-          <p className="font-sans font-semibold text-2xl">Sứ mệnh</p>
-          <hr className="bg-black h-0.5 w-36" />
-          <p className="font-light">
-            Đặt khách hàng làm trung tâm, cải tiến chất lượng dịch vụ, phát
-            triển đội ngũ chuyên nghiệp, minh bạch, trung thực và có trách
-            nhiệm.
-          </p>
-        </div>
-
-        <div className="laptop:col-span-1 text-center flex flex-col gap-3 items-center">
-          <p className="text-7xl font-mono font-bold">3</p>
-          <p className="font-sans font-semibold text-2xl">
-            Triết lý kinh doanh
-          </p>
-          <hr className="bg-black h-0.5 w-36" />
-          <p className="font-light">
-            Đặt khách hàng làm trung tâm, cải tiến chất lượng dịch vụ, phát
-            triển đội ngũ chuyên nghiệp, minh bạch, trung thực và có trách
-            nhiệm.
-          </p>
-        </div>
-
-        <div className="laptop:col-span-1 text-center flex flex-col gap-3 items-center">
-          <p className="text-7xl font-mono font-bold">4</p>
-          <p className="font-sans font-semibold text-2xl">Giá trị cốt lõi</p>
-          <hr className="bg-black h-0.5 w-36" />
-          <p className="font-light">
-            Chất lượng - Chuyên nghiệp - Tận tâm - Minh bạch - Sáng tạo - Bền
-            vững
-          </p>
-        </div>
+        {INTRO.map((item, index: number) => (
+          <div
+            className="laptop:col-span-1 text-center flex flex-col gap-3 items-center"
+            key={index}
+          >
+            <p className="text-7xl font-mono font-bold">{index + 1}</p>
+            <p className="font-sans font-semibold text-2xl">{item?.title}</p>
+            <hr className="bg-black h-0.5 w-36" />
+            <p className="font-light">{item?.description}</p>
+          </div>
+        ))}
       </div>
       <Break title="Thông tin liên hệ" />
 
@@ -118,7 +87,8 @@ export default function AboutUS() {
               <strong>Địa chỉ: </strong> VN
             </li>
             <li>
-              <strong>Hotline: </strong> <a href="tel:097.328.5665">097.328.5665</a>
+              <strong>Hotline: </strong>{" "}
+              <Link href="tel:097.328.5665">097.328.5665</Link>
             </li>
             <li>
               <strong>Website: </strong> VN
