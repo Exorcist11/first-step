@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import Break from "@/components/break";
 import { INTRO } from "@/utils/introduct";
+import { CONTACT } from "@/utils/contact";
 
 export default function AboutUS() {
   return (
@@ -88,7 +89,7 @@ export default function AboutUS() {
             </li>
             <li>
               <strong>Hotline: </strong>{" "}
-              <Link href="tel:097.328.5665">097.328.5665</Link>
+              <Link href="tel:097.328.5665">{CONTACT.tel_1}</Link>
             </li>
             <li>
               <strong>Website: </strong> VN
