@@ -8,6 +8,10 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Image from "next/image";
+import Error_TV from "@/components/Erorr_TV/Error_TV";
+import { ERRORS_TV } from "@/utils/errors-tv";
+import ReportPrice from "@/components/ReportPrice/ReportPrice";
+import { PRICE } from "@/utils/price";
 
 export const metadata: Metadata = {
   title: "Sữa Chữa Tivi",
@@ -19,7 +23,7 @@ export default function SuaTV() {
   return (
     <div className="flex flex-col gap-4 mb-10">
       <div className="text-center font-bold text-3xl py-4 bg-red-500">
-        <h1 className="text-center">SỬA BẾP TỪ 24/7 TẠI HÀ NỘI</h1>
+        <h1 className="text-center">SỬA BẾP TIVI 24/7 TẠI HÀ NỘI</h1>
         <div className="flex items-center justify-center mt-3">
           <Breadcrumb>
             <BreadcrumbList>
@@ -120,139 +124,13 @@ export default function SuaTV() {
         CÁC LỖI TIVI THƯỜNG GẶP VÀ CÁCH KHẮC PHỤC
       </h2>
 
-      <div className="text-lg gap-4 flex flex-col text-justify">
-        <ul>
-          <li className="flex flex-col gap-4">
-            <strong className="text-xl">Mất Hình, Mất Tiếng</strong>
-            <p>
-              Mất hình hoặc mất tiếng là một trong những lỗi phổ biến mà người
-              dùng tivi hay gặp phải. Lỗi này có thể xuất phát từ nhiều nguyên
-              nhân khác nhau, bao gồm cả lỗi phần cứng và phần mềm. Khi gặp tình
-              trạng này, kỹ thuật viên của chúng tôi sẽ tiến hành kiểm tra chi
-              tiết từng bộ phận, từ mạch xử lý hình ảnh, âm thanh cho đến các
-              kết nối và linh kiện khác. Dựa trên kết quả kiểm tra, chúng tôi sẽ
-              thay thế hoặc sửa chữa các linh kiện bị hỏng, đảm bảo tivi hoạt
-              động trở lại bình thường.
-            </p>
-
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/sua-tv/loi-man-hinh-tivi.jpg"
-                alt="loi-man-hinh-tivi"
-                width={600}
-                height={300}
-              />
-            </div>
-          </li>
-
-          <li className="flex flex-col gap-4">
-            <strong className="text-xl">Màn Hình Bị Sọc, Nhiễu</strong>
-            <p>
-              Màn hình bị sọc hoặc nhiễu có thể làm giảm chất lượng trải nghiệm
-              xem tivi. Nguyên nhân của hiện tượng này thường là do cáp tín hiệu
-              hoặc panel màn hình gặp sự cố. Đội ngũ kỹ thuật viên của chúng tôi
-              sẽ kiểm tra toàn bộ hệ thống cáp và panel màn hình để xác định
-              chính xác nguồn gốc của lỗi. Tùy vào mức độ hư hỏng, chúng tôi sẽ
-              tiến hành thay thế cáp tín hiệu hoặc sửa chữa, thay mới panel màn
-              hình, đảm bảo hình ảnh sắc nét và ổn định.
-            </p>
-
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/sua-tv/loi-man-hinh-tivi.jpg"
-                alt="loi-man-hinh-tivi"
-                width={600}
-                height={300}
-              />
-            </div>
-          </li>
-
-          <li className="flex flex-col gap-4">
-            <strong className="text-xl">Tivi Không Lên Nguồn</strong>
-            <p>
-              Khi tivi không lên nguồn, có thể do các bộ phận như bộ nguồn, bo
-              mạch chủ bị hỏng. Đây là lỗi nghiêm trọng, yêu cầu kỹ thuật viên
-              có tay nghề cao để kiểm tra và khắc phục. Chúng tôi sẽ kiểm tra
-              toàn bộ hệ thống điện của tivi, từ bộ nguồn, bo mạch chủ cho đến
-              các linh kiện liên quan khác. Sau khi xác định nguyên nhân, chúng
-              tôi sẽ sửa chữa hoặc thay thế các bộ phận bị hỏng, đảm bảo tivi
-              của bạn có thể khởi động và hoạt động bình thường.
-            </p>
-
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/sua-tv/loi-man-hinh-tivi.jpg"
-                alt="loi-man-hinh-tivi"
-                width={600}
-                height={300}
-              />
-            </div>
-          </li>
-
-          <li className="flex flex-col gap-4">
-            <strong className="text-xl">Các Lỗi Khác</strong>
-            <p>
-              Ngoài các lỗi trên, tivi còn có thể gặp nhiều vấn đề khác như mất
-              tín hiệu, không kết nối được với các thiết bị ngoại vi như đầu
-              thu, máy chơi game, loa ngoài... Đội ngũ kỹ thuật viên của chúng
-              tôi có kinh nghiệm xử lý đa dạng các lỗi này. Chúng tôi sẽ kiểm
-              tra hệ thống kết nối, cổng giao tiếp và các thiết bị liên quan để
-              xác định chính xác nguyên nhân và đưa ra giải pháp khắc phục hiệu
-              quả. Dù là lỗi nhỏ hay phức tạp, chúng tôi đều có cách xử lý để
-              đảm bảo tivi hoạt động tốt nhất.
-            </p>
-
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/sua-tv/loi-man-hinh-tivi.jpg"
-                alt="loi-man-hinh-tivi"
-                width={600}
-                height={300}
-              />
-            </div>
-          </li>
-
-          <li className="">
-            Chúng tôi hiểu rằng tivi là thiết bị giải trí quan trọng trong gia
-            đình bạn, vì vậy, việc sửa chữa nhanh chóng và hiệu quả là ưu tiên
-            hàng đầu của chúng tôi. Với đội ngũ kỹ thuật viên giàu kinh nghiệm
-            và trang thiết bị hiện đại, chúng tôi cam kết mang đến dịch vụ sửa
-            chữa tivi chất lượng cao, đáp ứng mọi yêu cầu của khách hàng. Hãy
-            liên hệ với chúng tôi ngay khi tivi của bạn gặp sự cố để được hỗ trợ
-            kịp thời và tận tâm.
-          </li>
-        </ul>
-      </div>
+      <Error_TV lst_erorr={ERRORS_TV} />
 
       <h2 className="font-bold text-2xl">
         BẢNG GIÁ DỊCH VỤ SỬA CHỮA TIVI TẠI HÀ NỘI
       </h2>
 
-      <div>
-        <table className="table-auto w-full text-lg">
-          <thead className="font-semibold uppercase bg-gray-50">
-            <tr>
-              <th className="p-2 whitespace-nowrap">
-                <div className="font-semibold text-left">Hạng mục sữa chữa</div>
-              </th>
-              <th className="p-2 whitespace-nowrap">
-                <div className="font-semibold text-left">Giá (VNĐ)</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="p-2 whitespace-nowrap">
-                Sửa lỗi màn hình (Full HD, 4K)
-              </td>
-              <td className="p-2 whitespace-nowrap">30,000</td>
-            </tr>
-            <tr>
-              <td className=""></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <ReportPrice listPrice={PRICE} />
 
       <h2 className="font-bold text-2xl">
         QUY TRÌNH SỬA CHỮA TIVI TẠI TRUNG TÂM

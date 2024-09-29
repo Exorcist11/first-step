@@ -76,3 +76,26 @@ export const SERIVICES_SUPPORT = [
     title: "Sửa Chữa Thiết Bị Âm Thanh",
   },
 ];
+
+export const FEED_BACKS = [
+  {
+    name: "Nguyễn Xuân Dũng",
+    job: "Lập trình viên",
+    cmt: "Trung tâm bảo hành bếp âu là 1 đơn vị sửa chữa thiết bị điện tử đáng tin cậy. Tôi đã nhiều lần sử dụng dịch vụ ở đây nhưng chưa lần nào làm cho tôi thất vọng. Làm việc có quy trình chuyên nghiệp, rất đúng giờ hẹn mà nhân viên còn lịch và thân thiện nữa. Hơn thế nữa, tôi còn thường xuyên được nhắc nhở về lịch bảo dưỡng, vệ sinh thiết bị định kỳ. Nhờ vậy mà những người bận rộn như tôi không thể nào quên được. 10 điểm cho chất lượng và thái độ phục vụ. Công ty nên giữ vững phong thái này nhé. Sẽ tiếp tục ủng hộ nếu có nhu cầu.",
+  },
+  {
+    name: "Phạm Bá Phương",
+    job: "Lập trình viên",
+    cmt: "Trung tâm bảo hành bếp âu là 1 đơn vị sửa chữa thiết bị điện tử đáng tin cậy. Tôi đã nhiều lần sử dụng dịch vụ ở đây nhưng chưa lần nào làm cho tôi thất vọng. Làm việc có quy trình chuyên nghiệp, rất đúng giờ hẹn mà nhân viên còn lịch và thân thiện nữa. Hơn thế nữa, tôi còn thường xuyên được nhắc nhở về lịch bảo dưỡng, vệ sinh thiết bị định kỳ. Nhờ vậy mà những người bận rộn như tôi không thể nào quên được. 10 điểm cho chất lượng và thái độ phục vụ. Công ty nên giữ vững phong thái này nhé. Sẽ tiếp tục ủng hộ nếu có nhu cầu.",
+  },
+  {
+    name: "Dương Ngọc Anh",
+    job: "Nội trợ",
+    cmt: "Trung tâm bảo hành bếp âu là 1 đơn vị sửa chữa thiết bị điện tử đáng tin cậy. Tôi đã nhiều lần sử dụng dịch vụ ở đây nhưng chưa lần nào làm cho tôi thất vọng. Làm việc có quy trình chuyên nghiệp, rất đúng giờ hẹn mà nhân viên còn lịch và thân thiện nữa. Hơn thế nữa, tôi còn thường xuyên được nhắc nhở về lịch bảo dưỡng, vệ sinh thiết bị định kỳ. Nhờ vậy mà những người bận rộn như tôi không thể nào quên được. 10 điểm cho chất lượng và thái độ phục vụ. Công ty nên giữ vững phong thái này nhé. Sẽ tiếp tục ủng hộ nếu có nhu cầu.",
+  },
+  {
+    name: "Nguyễn Ngọc Thảo",
+    job: "Y tá",
+    cmt: "Trung tâm bảo hành bếp âu là 1 đơn vị sửa chữa thiết bị điện tử đáng tin cậy. Tôi đã nhiều lần sử dụng dịch vụ ở đây nhưng chưa lần nào làm cho tôi thất vọng. Làm việc có quy trình chuyên nghiệp, rất đúng giờ hẹn mà nhân viên còn lịch và thân thiện nữa. Hơn thế nữa, tôi còn thường xuyên được nhắc nhở về lịch bảo dưỡng, vệ sinh thiết bị định kỳ. Nhờ vậy mà những người bận rộn như tôi không thể nào quên được. 10 điểm cho chất lượng và thái độ phục vụ. Công ty nên giữ vững phong thái này nhé. Sẽ tiếp tục ủng hộ nếu có nhu cầu.",
+  },
+];

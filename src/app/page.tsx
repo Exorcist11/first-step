@@ -1,5 +1,6 @@
 import Break from "@/components/break";
-import { SERIVICES_SUPPORT, STEPS, WHY } from "@/utils/homepage";
+import Feedback from "@/components/Slider/Feedback";
+import { FEED_BACKS, SERIVICES_SUPPORT, STEPS, WHY } from "@/utils/homepage";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +18,7 @@ export default function Home() {
 
       <Break title="Vì sao bạn nên chọn chúng tôi?" />
 
-      <div className="flex flex-col laptop:grid laptop:grid-cols-2 laptop:gap-5">
+      <div className="flex flex-col gap-4 laptop:grid laptop:grid-cols-2 laptop:gap-5">
         {WHY.map((item, index) => (
           <div
             className="laptop:col-span-1 border rounded-xl p-5 flex flex-col items-center justify-center gap-5"
@@ -56,7 +57,7 @@ export default function Home() {
 
       <Break title="Dịch vụ sửa chữa & Bảo dưỡng" />
 
-      <div className="grid grid-cols-3 gap-5 ">
+      <div className="grid grid-cols-1 laptop:grid-cols-3 gap-5 ">
         {SERIVICES_SUPPORT.map((item, index) => (
           <Link
             href={item.href}
@@ -70,6 +71,7 @@ export default function Home() {
       </div>
 
       <Break title="Đánh giá của khách hàng" />
+      <Feedback feedBacks={FEED_BACKS} />
     </section>
   );
 }
