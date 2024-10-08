@@ -20,6 +20,7 @@ import {
 } from "@/utils/electronic-stove";
 import { PRICE } from "@/utils/price";
 import ReportPrice from "@/components/ReportPrice/ReportPrice";
+import BreadCrumbComponent from "@/components/Breadcrumb/BreadCrumbComponent";
 
 export const metadata: Metadata = {
   title: "Sữa Chữa Bếp Điện",
@@ -30,24 +31,11 @@ export const metadata: Metadata = {
 export default function SuaBepDien() {
   return (
     <section className="flex flex-col gap-5">
-      <div className="text-center font-bold text-3xl py-4 bg-red-500">
-        <h1 className="text-center">SỬA BẾP TỪ 24/7 TẠI HÀ NỘI</h1>
-        <div className="flex items-center justify-center mt-3">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator>/</BreadcrumbSeparator>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/sua-bep-dien">
-                  Sữa chữa bếp từ tại Hà Nội uy tín - giá rẻ
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </div>
+       <BreadCrumbComponent
+        title="SỬA BẾP TỪ 24/7 TẠI HÀ NỘI"
+        name="Sửa chữa bếp từ tại Hà Nội uy tín - giá rẻ"
+        link="/sua-bep-dien"
+      />
 
       <p className="mt-3 text-lg text-justify">
         <strong> Trung tâm bảo hành và sữa chữa bếp từ Châu Âu</strong> tại Hà
@@ -207,7 +195,7 @@ export default function SuaBepDien() {
       </div>
 
       <h2 className="font-bold text-2xl">CÁC LOẠI BẾP HỖ TRỢ</h2>
-      <div className="grid grid-cols-4 mb-10">
+      <div className="grid grid-cols-2 laptop:grid-cols-4 mb-10">
         {VENDER_STOVE.map((item, index) => (
           <div key={index} className="col-span-1 p-5 relative h-[150px]">
             <Image

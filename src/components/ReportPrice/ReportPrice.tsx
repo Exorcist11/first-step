@@ -15,8 +15,8 @@ export default function ReportPrice({ listPrice }: ReportPricePros) {
       <table className="table-auto w-full text-lg">
         <thead className="font-semibold uppercase  bg-gray-50">
           <tr>
-            <th className="p-2 whitespace-nowrap ">
-              <div className="font-semibold text-left">Hạng mục sữa chữa</div>
+            <th className="p-2 laptop:whitespace-nowrap ">
+              <div className="font-semibold text-left">Hạng mục sửa chữa</div>
             </th>
             <th className="p-2 whitespace-nowrap">
               <div className="font-semibold text-left">Giá dịch vụ</div>

@@ -12,6 +12,7 @@ import Error_TV from "@/components/Erorr_TV/Error_TV";
 import { ERRORS_TV } from "@/utils/errors-tv";
 import ReportPrice from "@/components/ReportPrice/ReportPrice";
 import { PRICE } from "@/utils/price";
+import BreadCrumbComponent from "@/components/Breadcrumb/BreadCrumbComponent";
 
 export const metadata: Metadata = {
   title: "Sữa Chữa Tivi",
@@ -22,24 +23,11 @@ export const metadata: Metadata = {
 export default function SuaTV() {
   return (
     <div className="flex flex-col gap-4 mb-10">
-      <div className="text-center font-bold text-3xl py-4 bg-red-500">
-        <h1 className="text-center">SỬA BẾP TIVI 24/7 TẠI HÀ NỘI</h1>
-        <div className="flex items-center justify-center mt-3">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator>/</BreadcrumbSeparator>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/sua-tivi">
-                  Sữa chữa TV tại Hà Nội uy tín - giá rẻ
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </div>
+      <BreadCrumbComponent
+        title="SỬA THIẾT TIVI 24/7 TẠI HÀ NỘI"
+        name="Sửa chữa thiết bị âm thanh tại Hà Nội uy tín - giá rẻ"
+        link="/sua-tivi"
+      />
 
       <p className="mt-3 text-lg text-justify">
         Bạn đang gặp sự cố với chiếc tivi của mình và cần tìm một dịch vụ sửa

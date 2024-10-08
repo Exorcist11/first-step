@@ -14,7 +14,7 @@ interface ErorrPros {
 export default function Error_TV({ lst_erorr }: ErorrPros) {
   return (
     <div className="text-lg gap-4 flex flex-col text-justify">
-      <ul>
+      <ul className="gap-4 flex flex-col text-justify">
         {lst_erorr.map((item, index) => (
           <li className="flex flex-col gap-4" key={index}>
             <strong className="text-xl">{item.erorr_name}</strong>

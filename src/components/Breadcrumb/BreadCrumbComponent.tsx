@@ -18,7 +18,7 @@ export default function BreadCrumbComponent({
   title,
 }: BreadCrumbProps) {
   return (
-    <div className="text-center font-bold text-3xl py-4 bg-[#ffc746]">
+    <div className="text-center font-bold text-xl tablet:text-3xl laptop:text-3xl py-4 bg-[#ececec]">
       <h1 className="text-center uppercase">{title}</h1>
       <div className="flex items-center justify-center mt-3">
         <Breadcrumb>
